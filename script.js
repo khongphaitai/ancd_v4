@@ -246,27 +246,6 @@ document.getElementById('copyrightYear').textContent = new Date().getFullYear();
   updateUI();
 })();
 
-/* ---------------- Stat counters ---------------- */
-(function () {
-  const nums = document.querySelectorAll('[data-count]');
-  if (!nums.length) return;
-  const reduce = false;
-  const io = new IntersectionObserver(entries => {
-    entries.forEach(e => {
-      if (!e.isIntersecting) return;
-      const el = e.target, target = +el.dataset.count;
-      io.unobserve(el);
-      if (reduce) { el.textContent = target; return; }
-      const t0 = performance.now(), dur = 2000;
-      (function tick(t) {
-        const p = Math.min((t - t0) / dur, 1);
-        el.textContent = Math.round(target * (1 - Math.pow(1 - p, 3)));
-        if (p < 1) requestAnimationFrame(tick);
-      })(t0);
-    });
-  }, { threshold: 0.5 });
-  nums.forEach(n => io.observe(n));
-})();
 
 /* ---------------- Product popup data ---------------- */
 const PRODUCTS = {
