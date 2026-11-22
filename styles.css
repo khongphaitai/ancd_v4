@@ -1,10 +1,3 @@
-
-/* An Nhiên Cố Đô — upgraded landing page
-   Structure & UX patterns borrowed from lchome.vn (sticky top bar, editorial
-   intro, ghost-number stat, image cards with rectangular CTAs, floating
-   contact dock, big contact banner) — translated into An Nhiên's own
-   palette: cream #f7f3ea · panel #ede5d6 · navy #243858 · brown #49382b
-   terracotta accent #9c4a38 (in place of LC Home's red) · gold #f1cd7a */
 :root{
   --cream:#f7f3ea;
   --paper:#fbf9f3;
@@ -251,7 +244,7 @@ a{text-decoration:none;color:inherit}
 .footer p{font-size:15.5px;line-height:1.7}
 .footer a:hover{color:var(--gold)}
 .footer-subhead{margin-top:40px}
-.footer-brand-link{color:var(--cream);font-weight:700;text-decoration:underline;text-underline-offset:3px}
+.footer-brand-link{color:var(--footer-text);font-weight:400;text-decoration:none;text-underline-offset:3px}
 .social-row{display:flex;align-items:center;gap:18px;margin-top:30px}
 .social-circle{width:46px;height:46px;border-radius:50%;background:var(--green);display:flex;align-items:center;justify-content:center;transition:transform .2s}
 .social-circle:hover{transform:translateY(-3px)}
